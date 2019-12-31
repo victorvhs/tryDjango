@@ -3,10 +3,11 @@ from django.shortcuts import render
 
 def home_page(request):
     Mtitle = "Aqui..."
-    return render(request,"hello_world.html",{"title":Mtitle})
+    context ={"title":Mtitle, "produtos":["solidão","tristeza","dor"]}
+    return render(request,"home.html",context)
 
 def about_page(request):
-    return render(request,"hello_world.html",{"title":"About"})
+    return render(request,"about.html",{"title":"About"})
 
 
 def contatc_page(request):

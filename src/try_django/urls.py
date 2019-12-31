@@ -15,6 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from blog.views import (
+    blog_post_detail_page
+)
 from .views import (
     home_page,
     about_page,
