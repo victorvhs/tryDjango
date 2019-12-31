@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h3>{{ user }}</h3>
+    {{user.is_authenticated}}
+    {% if not user.is_authenticated%}
+        <p>Faça Login</p>
+        {% for item in produtos %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    {% endif %}
+
+{% endblock %}
