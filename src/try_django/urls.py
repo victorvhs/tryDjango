@@ -29,5 +29,6 @@ urlpatterns = [
     path('',home_page),
     path('about/',about_page),
     path('contact/',contatc_page),
+    path('blog/<int:post_id>',blog_post_detail_page)
 
 ]
